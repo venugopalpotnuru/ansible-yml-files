@@ -1,0 +1,9 @@
+ hosts: all
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    - name: INSTALLING HTTPD ON ALL SERVERS
+      action: yum name=httpd state=present
+~
+

@@ -1,0 +1,8 @@
+- hosts: all
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    - name: RESTARTING HTTPD ON ALL SERVERS
+      action: service name=httpd state=restarted
+

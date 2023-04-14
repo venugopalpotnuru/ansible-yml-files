@@ -1,0 +1,10 @@
+ hosts: all
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    - name: copying a file from master to hosts
+      copy:
+        src: /home/ansible/british.txt
+        dest: /home/ansible
+
