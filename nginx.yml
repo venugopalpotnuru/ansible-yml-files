@@ -1,0 +1,8 @@
+- hosts: all
+  become: yes
+  tasks:
+    - name: installing nginx
+      action: yum pkg=yum state=present
+    - name: start nginx
+      service: name=nginx state=started
+

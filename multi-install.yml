@@ -1,7 +1,9 @@
-- hosts: all
+- hosts: all 
   become: yes
   tasks:
     - name: installing httpd
       action: yum pkg=httpd state=present
     - name: starting httpd
       action: service name=httpd state=restarted
+    - name: installing java
+      action: yum name=java state=present

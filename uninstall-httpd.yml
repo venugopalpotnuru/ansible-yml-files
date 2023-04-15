@@ -1,0 +1,5 @@
+- hosts: all 
+  become: yes
+  tasks:
+    - name: uninstalling httpd
+      action: yum name=httpd state=absent

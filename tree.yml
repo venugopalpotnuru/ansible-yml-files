@@ -1,0 +1,5 @@
+- hosts: all
+  become: yes
+  tasks:
+    - name: installing tree
+      action: yum pkg=tree state=present

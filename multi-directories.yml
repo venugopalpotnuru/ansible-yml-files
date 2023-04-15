@@ -1,0 +1,9 @@
+- hosts: all
+  become: yes
+  tasks:
+    - name: creating multi directories
+      file: path={{item}} state=directory
+      with_items: 
+      - '/home/ansible/file6'
+      - '/home/ansible/file7'
+      - '/home/ansible/file8'
