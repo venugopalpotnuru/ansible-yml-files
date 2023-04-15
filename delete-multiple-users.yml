@@ -1,0 +1,9 @@
+- hosts: all
+  become: yes
+  tasks:
+    - name: deleting multi users
+      user: name={{item}} state=absent
+      with_items:
+      - 'kalyan'
+      - 'arjun'
+      - 'gopal'
